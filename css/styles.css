@@ -21,7 +21,6 @@ body {
 }
 .link {
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:hover,
 .link:focus {
@@ -88,6 +87,7 @@ p {
 }
 
 .header-nav-link {
+  position: relative;
   display: block;
   font-weight: 500;
   font-size: 14px;
@@ -96,7 +96,8 @@ p {
   color: var(--color-text);
   padding-top: 32px;
   padding-bottom: 32px;
-  position: relative;
+  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list .link.current {
@@ -104,13 +105,14 @@ p {
 }
  
 .link.current::after {
+  position: absolute;
   content: '';
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--color-text-logo);
-  position: absolute;
+  
   bottom: -1px;
   left: 0;
 }
@@ -141,6 +143,8 @@ p {
   color: var(--color-text-secohd);
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-icon {
@@ -425,7 +429,8 @@ p {
   border-radius: 4px;
   color: var(--color-icons);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),              
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -463,6 +468,8 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primery-background);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link {
@@ -471,6 +478,8 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--address-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-list-item {
@@ -499,7 +508,7 @@ address {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-footer-link:hover,
@@ -589,7 +598,6 @@ address {
 .project-link:hover,
 .project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  
 }
 
 /* ===== Project overlay===== */
@@ -611,7 +619,8 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project:hover .project-overlay {
+.project-link:hover .project-overlay,
+.project-link:focus .project-overlay {
   transform: translateY(0);
 }
 
@@ -691,6 +700,6 @@ address {
 .button-close:hover,
 .button-close:focus {
  border: 1px solid rgba(0, 0, 0, 0.1);
- background-color: var(--color-icons)
+ background-color: var(--color-icons);
 }
 
