@@ -704,8 +704,7 @@ address {
 .button-close:hover,
 .button-close:focus {
  border: 1px solid rgba(0, 0, 0, 0.1);
- background-color: var(--color-icons);
- color: var(--primery-background)
+ color: var(--color-text-logo)
 }
 
 .button-close-icon{
